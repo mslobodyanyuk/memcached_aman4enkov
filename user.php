@@ -10,5 +10,5 @@ while ($status){
 	$status = Storage::get('user_locker');
 }
 
-echo "OK. User can work\";
+echo "OK. User can work\n";
 // app logic

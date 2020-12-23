@@ -80,7 +80,7 @@ And there is one more file which, roughly speaking, is user-defined.
 `user.php`: Here we can refer to this lock AND, IF it exists, then we will wait for the unlock, so to speak.
 
 Example. Notification system when you order a bank statement, they say: "Your request is being processed, please come back later." BUT IF you go to your page in 10 seconds you will see
-simply informing you that your data is still being processed. - Accordingly, this example is just the same in action. We refer to our status(- `'user_locker'` ). IF it is `true`, bye
+simply informing you that your data is still being processed. - Accordingly, this example is just the same in action. We refer to our status(- `'user_locker'` ). IF it is `true`, until
 it is `true` - then we respectively will display the message `"The user is still locked"` And "sleep" for 1 second. - Accordingly, after it is unlocked, we display a message...
 Well, and then it rushed, respectively, again, our application logic.
 

@@ -9,7 +9,7 @@ $command = 'user_locker';
 Storage::set($command, true);
 echo "Start locking...\n";
 
-sleep(10);
+sleep(10);//app logic
 
 echo "Users unlocked...\n";
 Storage::delete($command);

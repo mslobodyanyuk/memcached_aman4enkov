@@ -19,7 +19,7 @@ class Storage{
 			static::$cache = $m;
 		}
 		
-		return static::$cache = $m;
+		return static::$cache;
 	}
  	
 	public static function set($key, $value) {
@@ -30,7 +30,7 @@ class Storage{
 		}
 	}
 	
-	public static function delete($key, $value) {
+	public static function delete($key) {
 		try{			
 			return static::getInstance()->delete(static::$prefix . $key);
 		}catch (Exception $error) {
@@ -38,9 +38,9 @@ class Storage{
 		}
 	}
 	
-	public static function get($key, $value) {
+	public static function get($key) {
 		try{			
-			return static::getInstance()->set(static::$prefix . $key);
+			return static::getInstance()->get(static::$prefix . $key);
 		}catch (Exception $error) {
 			echo $error->getMessage();
 		}
